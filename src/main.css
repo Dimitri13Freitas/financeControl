@@ -1,0 +1,32 @@
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: #2f2f2f;
+  color: #141414;
+}
+header {
+  background: radial-gradient(
+      15.7% 194.02% at 3.25% -75.64%,
+      #f7fbff 36.93%,
+      rgba(119, 254, 249, 0) 100%
+    )
+    radial-gradient(
+      9.35% 113.25% at 33.85% 100%,
+      #f7fbff 0%,
+      rgba(247, 251, 255, 0) 100%
+    )
+    radial-gradient(
+      15.19% 222.65% at 17.81% -122.65%,
+      #8a8ffc 0%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    radial-gradient(
+      15.65% 134.79% at 63.68% 0%,
+      #f7fbff 0%,
+      rgba(154, 119, 254, 0) 100%
+    )
+    radial-gradient(
+      26.12% 221.87% at 104.56% 79.06%,
+      #8a8ffc 20.37%,
+      #77fef9 100%
+    );
+}
