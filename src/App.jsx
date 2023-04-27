@@ -1,4 +1,6 @@
 import React from "react";
+import { DataTable } from "./components/DataTable.jsx";
+import { Modal } from "./components/Modal.jsx";
 import {
   Money,
   ArrowFatLinesUp,
@@ -7,6 +9,24 @@ import {
 } from "@phosphor-icons/react";
 
 function App() {
+  const [modal, setModal] = React.useState(false);
+  const [dados, setDados] = React.useState([
+    {
+      desc: "Alimentação",
+      valor: 400,
+      tipo: "saida",
+    },
+    {
+      desc: "Salário",
+      valor: 1500,
+      tipo: "entrada",
+    },
+  ]);
+
+  React.useEffect(() => {
+    console.log(modal);
+  }, [modal]);
+
   return (
     <>
       <header>
@@ -31,7 +51,12 @@ function App() {
             </div>
           </div>
           <div className="btnGamb">
-            <button className="add">
+            <button
+              onClick={() => {
+                setModal(!modal);
+              }}
+              className="add"
+            >
               <ListPlus size={34} color="#141414" />
               Adicionar
             </button>
@@ -46,35 +71,17 @@ function App() {
               </div>
               <span>R$ 1.700,00</span>
             </div>
-            <input type="text" />
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Profissão</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>João</td>
-                <td>25</td>
-                <td>Desenvolvedor</td>
-              </tr>
-              <tr>
-                <td>Maria</td>
-                <td>30</td>
-                <td>Designer</td>
-              </tr>
-              <tr>
-                <td>Carlos</td>
-                <td>40</td>
-                <td>Gerente de projeto</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="table">
+            <div className="row header">
+              <div className="cell m">Descrição</div>
+              <div className="cell dir">Valor</div>
+              <div className="cell  dir">Tipo</div>
+            </div>
+            <DataTable data={dados} />
+          </div>
         </div>
+        {modal && <Modal />}
       </main>
     </>
   );
