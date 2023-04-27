@@ -7,8 +7,9 @@
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   background: #2f2f2f;
-  color: #141414;
   margin: 20px 73px;
+  color: #141414;
+  overflow: hidden;
 }
 main {
   margin: 0 2.25rem;
@@ -48,7 +49,7 @@ header {
 header h1 {
   margin: 34px 0 44px 0;
   position: relative;
-  z-index: 2000;
+  z-index: 2;
 }
 
 header:after {

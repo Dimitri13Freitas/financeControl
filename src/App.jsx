@@ -1,6 +1,6 @@
 import React from "react";
-import { DataTable } from "./components/DataTable.jsx";
-import { Modal } from "./components/Modal.jsx";
+import { DataTable } from "./components/DataTable";
+import { Modal } from "./components/Modal";
 import {
   Money,
   ArrowFatLinesUp,
@@ -81,8 +81,8 @@ function App() {
             <DataTable data={dados} />
           </div>
         </div>
-        {modal && <Modal />}
       </main>
+      {modal && <Modal setModal={setModal} />}
     </>
   );
 }

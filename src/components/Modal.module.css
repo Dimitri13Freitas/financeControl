@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 3;
+}
+.border {
+  background: linear-gradient(229.82deg, #ffffff 7.92%, #4b4b4b 66.55%);
+  padding: 1px;
+}
+.modal {
+  border: 2px solid #4b4b4b;
+  border-radius: 4px;
+  position: absolute;
+  padding: 4px 90px 40px 30px;
+  display: inline-block;
+  background: rgba(47, 47, 47, 0.9);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  left: 35vw;
+  top: 22vh;
+}
+
+/* border: 2px solid;
+border-image-source: linear-gradient(215.74deg, #FFFFFF 12.27%, #4B4B4B 63.54%); */
+
