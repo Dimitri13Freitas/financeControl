@@ -145,10 +145,17 @@ header:after {
   color: #8a8ffc;
   background: rgba(138, 143, 252, 0.08);
 }
+.row.saida:hover {
+  border: 1px solid #8a8ffc;
+}
+.row.entrada:hover {
+  border: 1px solid #77fef9;
+}
 .tbody .row {
   font-size: 18px;
   padding: 11px 20px;
   border-radius: 8px;
+  border: 1px solid #2f2f2f;
 }
 .tbody .row.entrada {
   background: rgba(119, 254, 249, 0.08);

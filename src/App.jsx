@@ -9,6 +9,8 @@ import {
 } from "@phosphor-icons/react";
 
 function App() {
+  const [inputDesc, setInputDesc] = React.useState("");
+  const [inputValor, setInputValor] = React.useState("");
   const [modal, setModal] = React.useState(false);
   const [dados, setDados] = React.useState([
     {
@@ -23,9 +25,9 @@ function App() {
     },
   ]);
 
-  React.useEffect(() => {
-    console.log(modal);
-  }, [modal]);
+  React.useState(() => {
+    console.log(inputDesc);
+  }, [inputDesc]);
 
   return (
     <>
@@ -82,7 +84,13 @@ function App() {
           </div>
         </div>
       </main>
-      {modal && <Modal setModal={setModal} />}
+      {modal && (
+        <Modal
+          setInputDesc={setInputDesc}
+          setInputValor={setInputValor}
+          setModal={setModal}
+        />
+      )}
     </>
   );
 }
