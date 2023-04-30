@@ -12,22 +12,11 @@ function App() {
   const [inputDesc, setInputDesc] = React.useState("");
   const [inputValor, setInputValor] = React.useState("");
   const [modal, setModal] = React.useState(false);
-  const [dados, setDados] = React.useState([
-    {
-      desc: "Alimentação",
-      valor: 400,
-      tipo: "saida",
-    },
-    {
-      desc: "Salário",
-      valor: 1500,
-      tipo: "entrada",
-    },
-  ]);
+  const [dados, setDados] = React.useState([]);
 
-  React.useState(() => {
-    console.log(inputDesc);
-  }, [inputDesc]);
+  React.useEffect(() => {
+    console.log(inputValor);
+  }, [inputValor]);
 
   return (
     <>
@@ -78,7 +67,7 @@ function App() {
             <div className="row header">
               <div className="cell m">Descrição</div>
               <div className="cell dir">Valor</div>
-              <div className="cell  dir">Tipo</div>
+              <div className="cell dir">Tipo</div>
             </div>
             <DataTable data={dados} />
           </div>
